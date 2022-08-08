@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <AppBar position="static">
-      <Typography>
-        Hello
+      <Typography variant="h5">
         <Link to="/">Home</Link>
+      </Typography>
+      <Typography variant="h5">
+        <Link to="/projects">Projects</Link>
       </Typography>
       
     </AppBar>

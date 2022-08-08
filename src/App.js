@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Homepage } from './components';
+import { Navbar, Homepage, Projects } from './components';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Container, Typography } from '@material-ui/core';
 import './App.css';
@@ -15,13 +15,14 @@ function App() {
         <Container>
           <div className="routes">
             <Routes>
-              <Route exact path="/" element={<Homepage/>} />
+              <Route exact path="/" element={<Homepage />} />
+              <Route exact path="/projects" element={<Projects />} />
             </Routes>
           </div>
         </Container>
       </div>
       <div className="footer">
-        Footer stuff
+        <Typography variant="h4">Footer stuff</Typography>
       </div>
     </div>
   );
