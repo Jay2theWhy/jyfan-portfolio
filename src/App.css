@@ -14,7 +14,11 @@
   width: 100%;
 }
 
+.routes{
+  padding: 20px;
+}
+
 .footer{
   flex: 1;
-  
+
 }
