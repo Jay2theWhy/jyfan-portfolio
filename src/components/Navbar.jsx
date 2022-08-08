@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { AppBar, Typography } from '@material-ui/core';
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <AppBar position="static">
+      <Typography>
+        Hello
+      </Typography>
+    </AppBar>
   )
 }
 

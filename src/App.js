@@ -4,10 +4,16 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-          Hello World
-      </header>
+    <div className="app">
+      <div className="navbar">
+          <Navbar />
+      </div>
+      <div className="main">
+        Main body
+      </div>
+      <div className="footer">
+        Footer stuff
+      </div>
     </div>
   );
 }
