@@ -14,6 +14,8 @@ const Navbar = () => {
         {/* change this logo to my own */}
         <img src={images.logo} alt="logo" />
       </div>
+
+      {/* desktop navigation menu */}
       <ul className="app__navbar-links">
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
@@ -43,6 +45,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
+      
     </nav>
   )
 }
