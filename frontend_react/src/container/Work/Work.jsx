@@ -23,8 +23,20 @@ const Work = () => {
       })
   }, [])
 
+  // handles filtering of different work categories
   const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y:100, opacity: 0 }]);
 
+    setTimeout(() => {
+      setAnimateCard([{ y:0, opacity: 1 }]);
+
+      if(item === 'All'){
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)))
+      }
+    }, 500);
   }
 
   return (
@@ -36,7 +48,7 @@ const Work = () => {
         {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
           <div 
             key={index}
-            onclick={() => handleWorkFilter(item)}
+            onClick={() => handleWorkFilter(item)}
             className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
           >
             {item}
