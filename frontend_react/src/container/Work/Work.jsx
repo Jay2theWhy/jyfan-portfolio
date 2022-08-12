@@ -110,7 +110,7 @@ const Work = () => {
 }
 
 export default AppWrap(
-  MotionWrap(Work, 'app__about'), 
+  MotionWrap(Work, 'app__works'), 
   'work',
   'app__primarybg'
 );
