@@ -3,11 +3,9 @@ import { BsLinkedin, BsTwitter, BsGithub } from 'react-icons/bs';
 import { FaAngellist } from 'react-icons/fa';
 import { IoDocumentAttach } from 'react-icons/io5';
 
+import { files } from '../constants';
+
 const SocialMedia = () => {
-  const handleClick = () => {
-    window.open('/JY_Resume.pdf');
-    console.log('hello')
-  }
 
   return (
     <div className="app__social">
@@ -17,8 +15,8 @@ const SocialMedia = () => {
         <a href="https://www.linkedin.com/in/jingyangfan/" target="_blank">
             <BsLinkedin />
         </a>
-        <a>
-          <IoDocumentAttach onClick={handleClick}/>
+        <a href={files.resume} target="_blank">
+          <IoDocumentAttach />
         </a>
         {/* <a>
             <BsTwitter />
