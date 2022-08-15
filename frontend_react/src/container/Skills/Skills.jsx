@@ -13,8 +13,8 @@ const Skills = () => {
 
   // get sanity data
   useEffect(() => {
-    const experienceQuery = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
+    const experienceQuery = '*[_type == "experiences"] | order(order asc)';
+    const skillsQuery = '*[_type == "skills"] | order(order asc)';
 
     client.fetch(experienceQuery)
       .then((data) => {
@@ -32,6 +32,7 @@ const Skills = () => {
       <h2 className="head-text">Skills & Experiences</h2>
 
       <div className="app__skills-container">
+      {console.log(skills)}
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
             <motion.div

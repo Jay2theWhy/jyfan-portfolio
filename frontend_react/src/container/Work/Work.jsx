@@ -15,7 +15,7 @@ const Work = () => {
 
   // get sanity data
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "works"] | order(order asc)';
     client.fetch(query)
       .then((data) => {
         setWorks(data);
