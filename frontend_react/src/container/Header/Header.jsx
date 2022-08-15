@@ -72,7 +72,7 @@ const Header = () => {
           </div>
         ))}
       </motion.div>
-
+      
     </div>
   )
 }
