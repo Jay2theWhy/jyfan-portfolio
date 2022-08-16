@@ -45,7 +45,7 @@ const Work = () => {
       
       {/* work categories */}
       <div className="app__work-filter">
-        {['React JS', 'Web App', 'REST API', 'Three.js', 'Data Visualization', 'All'].map((item, index) => (
+        {['React', 'Web App', 'REST API', 'Three.js', 'Data Visualization', 'All'].map((item, index) => (
           <div 
             key={index}
             onClick={() => handleWorkFilter(item)}
