@@ -1,6 +1,6 @@
 import React, {useState } from 'react'
 
-import { images } from '../../constants';
+import { images, files } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
@@ -36,14 +36,18 @@ const Footer = () => {
     <>
       <h2 className="head-text">Take a coffee & chat with me</h2>
       <div className="app__footer-cards">
-        <div className="app__footer-card">
+        <a className="app__footer-card" href="mailto:jingyangfan16@gmail.com">
           <img src={images.email} alt="email" />
-          <a href="mailto:jingyangfan16@gmail.com" className="p-text">jingyangfan16@gmail.com</a>
-        </div>
-        <div className="app__footer-card">
+          <p className="p-text">jingyangfan16@gmail.com</p>
+        </a>
+        <a className="app__footer-card" href="tel: +1 (416) 858-1488">
           <img src={images.mobile} alt="mobile" />
-          <a href="tel: +1 (416) 858-1488" className="p-text">+1 (416) 858-1488</a>
-        </div>
+          <p className="p-text">+1 (416) 858-1488</p>
+        </a>
+        <a className="app__footer-card" href={files.resume} target="_blank">
+          {/* place image here */}
+          <p className="p-text">Résumé</p>
+        </a>
       </div>
 
       {!isFormSubmitted ? 
