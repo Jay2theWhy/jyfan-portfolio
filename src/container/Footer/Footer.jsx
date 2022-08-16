@@ -45,7 +45,7 @@ const Footer = () => {
           <p className="p-text">+1 (416) 858-1488</p>
         </a>
         <a className="app__footer-card" href={files.resume} target="_blank">
-          {/* place image here */}
+        <img src={images.document} alt="resume" />
           <p className="p-text">Résumé</p>
         </a>
       </div>
