@@ -5,14 +5,6 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
 
-// fill in descriptions
-// const abouts = [
-//   {  title: 'Web Development', description: 'I am a good developer.', imgUrl: images.about01 },
-//   {  title: 'Frontend Development', description: 'I am a good developer.', imgUrl: images.about02},
-//   {  title: 'Data Science', description: 'I am a good developer.', imgUrl: images.about03},
-//   {  title: 'Web Animations', description: 'I am a good developer.', imgUrl: images.about04}
-// ]
-
 // dynamically fetches about from Sanity
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -24,7 +16,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">I Know That <span>Good Development</span><br />means <span>Good Business</span></h2>
+      <h2 className="head-text">Here are some of the things I love to do</h2>
       
       <div className="app__profiles">
         {abouts.map((about, index) => (
