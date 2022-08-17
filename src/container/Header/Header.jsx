@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
+import details from './details';
 
 import './Header.scss';
 
@@ -31,18 +32,19 @@ const Header = () => {
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hi there, my name's</p>
-              <h1 className="head-text">Jing&nbsp;Yang Fan</h1>
+              <h1 className="head-text">{details.name}</h1>
             </div>
           </div>
 
           {/* titles */}
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Data Scientist</p>
+            {details.titles.map((title) => (
+              <p className="p-text">{title}</p>
+            ))}
           </div>
           {/* small blurb about myself */}
           <div className="tag-cmp app_flex">
-            <p className="p-text">About ME</p>
+            <p className="p-text">{details.about}</p>
           </div>
         </div>
       </motion.div>
