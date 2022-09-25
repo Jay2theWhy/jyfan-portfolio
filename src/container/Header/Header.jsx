@@ -83,6 +83,8 @@ const Header = () => {
   )
 }
 
+// export default AppWrap(Header, 'app__home');
+
 export default AppWrap(
   MotionWrap(Header, 'app__home'), 
   'home',
