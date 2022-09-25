@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import {AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 
+import { client, urlFor } from '../../client';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
 
 import './Work.scss';
 
@@ -44,8 +44,8 @@ const Work = () => {
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
       
       {/* work categories */}
-      <div className="app__work-filter">
-        {['React', 'Web App', 'REST API', 'Three.js', 'Data Visualization', 'All'].map((item, index) => (
+      {/* <div className="app__work-filter">
+        {['React', 'Web App', 'REST API', 'Data Visualization', 'All'].map((item, index) => (
           <div 
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -54,7 +54,7 @@ const Work = () => {
             {item}
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* sanity items */}
       <motion.div
@@ -72,7 +72,7 @@ const Work = () => {
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
-                <a href={work.projectLink} target="_blank" rel="noref">
+                <a href={work.projectLink} target="_blank" rel="noref noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -82,7 +82,7 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.codeLink} target="_blank" rel="noref">
+                <a href={work.codeLink} target="_blank" rel="noref noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
